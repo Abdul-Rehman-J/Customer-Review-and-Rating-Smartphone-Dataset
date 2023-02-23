@@ -1,1 +1,57 @@
-Readme
+About Dataset
+Flipkart Customer Review and Rating
+Context
+The dataset was produced by extracting data from Flipkart.com using a crawler (or bots) that crawled to the deepest of the web pages (more than 13 thousand mobile reviews) on 02-23-2023.
+Content
+The dataset consists of 9 columns
+1.	product_id: Product id
+2.	product_title: Mobiles name on which customer gives the reviews
+3.	rating: Ratings given by the customer
+4.	summary: Reviews summary or details given by the customer
+5.	review: Reviews given by the customer
+6.	location: Location of customer
+7.	date: Date on which customer gives the review 
+8.	upvotes: Up votes given by the customer
+9.	downvotes: Down votes given by the customer
+Interpretation:
+The ratings are number of Stars given my customer to the product.
+These stars can be interpreted in many ways like
+•	Sentiment ( Positive or Negative )
+This can be achieved by forming into a binary classification model with a threshold function like
+rating >=4 -> Positive
+rating <4 -> Negative
+•	Ratings
+This can be achieved by considering ratings as individual class. Several other visualisations, interpretations and models can be drawn from the dataset.
+List of Products:
+['POCO C31 (Shadow Gray, 64 GB)',
+ 'REDMI 10 (Caribbean Green, 64 GB)',
+ 'Infinix HOT 20 Play (Racing Black, 64 GB)',
+ 'Infinix HOT 20 Play (Luna Blue, 64 GB)',
+ 'Infinix HOT 20 Play (Fantasy Purple, 64 GB)',
+ 'REDMI 10 (Midnight Black, 64 GB)',
+ 'Infinix HOT 20 Play (Aurora Green, 64 GB)',
+ 'MOTOROLA G62 5G (Midnight Gray, 128 GB)',
+ 'APPLE iPhone 11 (White, 128 GB)',
+ 'vivo T1 44W (Midnight Galaxy, 128 GB)',
+ 'vivo T1 44W (Starry Sky, 128 GB)',
+ 'MOTOROLA g52 (Charcoal Grey, 64 GB)',
+ 'vivo T1 44W (Midnight Galaxy, 128 GB)',
+ 'MOTOROLA G62 5G (Frosted Blue, 128 GB)',
+ 'POCO C31 (Shadow Gray, 32 GB)',
+ 'MOTOROLA g52 (Charcoal Grey, 128 GB)',
+ 'POCO C31 (Royal Blue, 64 GB)',
+ 'POCO M4 Pro (Cool Blue, 64 GB)',
+ 'vivo T1 44W (Starry Sky, 128 GB)',
+ 'vivo T1 44W (Midnight Galaxy, 128 GB)']
+Basic Information:
+BASE_URL = 'https://www.flipkart.com/'
+SEARCH_QUERY = "mobile"
+TOP_N_PRODUCTS = 20
+REVIEW_PAGES_TO_SCRAPE_FROM_PER_PRODUCT = 150 #10 Reviews exist per page
+ 
+Dataset Sample:
+ 
+Acknowledgements
+This dataset was created by Abdul Manan using web-crawling service.
+Inspiration
+Analyses of the product specification and brand, sentiment can be performed.
